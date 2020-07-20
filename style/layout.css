@@ -1,22 +1,25 @@
 * {
   font-family: 'Montserrat', sans-serif;
+  font-size: 1.1vw;
 }
 
 body {
   width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
 }
 
+/* HEADER */
+
 header {
 	background: #fff;
 	width: 100%;
   padding: 1.44em 6.5em 1.44em 6.5em;
 	position: fixed;
-	top: 0;
-	left: 0;
 	z-index: 100;
   background-color: #808080;
 }
@@ -45,9 +48,9 @@ nav {
 
 #menu-icon {
 	display: none;
-	width: 3.31em;
-	height: 3.31em;
-  background: transparent url('https://treehouse-blog.s3.amazonaws.com/Respond-Menu/img/menu-icon.png') center;
+	width: 54px;
+	height: 54px;
+  background: transparent url('https://treehouse-blog.s3.amazonaws.com/Respond-Menu/img/menu-icon.png') center no-repeat;
 }
 
 ul {
@@ -70,6 +73,63 @@ li a {
 	color: #fe9a2b;
 }
 
+/* ALL */
+
+h1 {
+  font-size: 4.5em;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+/* MAIN */
+
+.main {
+  width: 100%;
+  background-color: #fe9a2b;
+  display: flex;
+  flex-direction: row;
+  padding: 8em 0 0 4.5em;
+  margin: 0 auto;
+}
+
+.main img {
+  margin-top: 1em;
+  width: 29.5%;
+  margin-left: 1em;
+}
+
+.main-text {
+  padding: 1.5em 0 0 6.56em;
+}
+
+.main-text h1 {
+  color: white;
+  width: 60%;
+}
+
+.main-text p {
+  color: white;
+  width: 80%;
+}
+
+.main-text button {
+  background-color: white;
+  padding: 1.5em 2.2em;
+  margin-top: 3em;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #2a2a2a;
+}
+
+.main-text button:hover {
+  background-color: #2a2a2a;
+  color: white;
+}
+
 @media screen and (max-width: 800px) {
   header {
     position: absolute;
@@ -87,7 +147,7 @@ li a {
 		border: 2px solid #444;
     float: left;
     right: 18.25em;
-		top: 1.44em;
+		top: 6em;
 		width: 15%;
   }
 
@@ -100,9 +160,110 @@ li a {
 
   nav li a {
     color: black;
+    font-size: 2em;
+  }
+
+  nav li a:hover {
+    color: #fe9a2b;
   }
 
   nav:hover ul {
     display: block;
+  }
+
+  nav:active ul {
+    display: block;
+  }
+
+  /* ALL */
+
+  h1 {
+    font-size: 3.5em;
+  }
+
+  p {
+    font-size: 2em;
+  }
+
+  /* MAIN */
+
+  .main h1 {
+    width: 80%;
+  }
+
+  .main img {
+    margin-top: 5em;
+    width: 35%;
+    height: auto;
+  }
+
+  .main-text {
+    margin-top: 6em;
+  }
+
+  .main button {
+    font-size: 1.2em;
+  }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+  nav ul, nav:active ul {
+    margin-top: 6em;
+    width: 30%;
+  }
+
+  nav li a {
+    color: black;
+    font-size: 5em;
+  }
+
+  #logo img {
+    width: 8em;
+    height: 8em;
+  }
+
+  #menu-icon {
+    margin-top: 2.5em;
+  }
+
+
+  /* ALL */
+
+  h1 {
+    font-size: 7em;
+  }
+
+  p {
+    font-size: 5em;
+  }
+
+  /* MAIN */
+
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main h1 {
+    width: 80%;
+  }
+
+  .main img {
+    order: 2;
+    margin-top: 5em;
+    width: 80%;
+    height: auto;
+  }
+
+  .main-text {
+    margin-top: 15em;
+    left: 0;
+    order: 1;
+  }
+
+  .main button {
+    font-size: 3em;
   }
 }
