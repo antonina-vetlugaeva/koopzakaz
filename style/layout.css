@@ -29,7 +29,7 @@ header {
   align-items: center;
 }
 
-#logo p {
+#logo span {
 	float: left;
   padding-left: 1.4em;
   color: white;
@@ -79,8 +79,14 @@ h1 {
   font-size: 4.5em;
 }
 
+h2 {
+  font-size: 3em;
+  line-height: 110%;
+}
+
 p {
   font-size: 1.5em;
+  line-height: 120%;
 }
 
 /* MAIN */
@@ -130,9 +136,58 @@ p {
   color: white;
 }
 
+/* ABOUT */
+
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4.5em 6.5em 5.5em 6.5em;
+}
+
+.about-text {
+  padding: 1.5em 6.56em 0 0;
+  width: 50%;
+}
+
+.about-text h2 {
+  width: 80%;
+  margin: 0 0 1em 0;
+}
+
+.video {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-right: 6.56em;
+}
+
+.video::after {
+  padding-top: 56.25%;
+  display: block;
+  content: '';
+}
+
+.video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
 @media screen and (max-width: 800px) {
   header {
     position: absolute;
+  }
+
+  #logo {
+    margin-top: 1em;
+  }
+
+  #logo span {
+    font-size: 2em;
   }
 
   #menu-icon {
@@ -224,8 +279,8 @@ p {
     height: 8em;
   }
 
-  #menu-icon {
-    margin-top: 2.5em;
+  #logo span {
+    font-size: 5em;
   }
 
 
@@ -239,9 +294,13 @@ p {
     font-size: 5em;
   }
 
+  h2 {
+    font-size: 6em;
+  }
+
   /* MAIN */
 
-  .main {
+  .main, .about {
     display: flex;
     flex-direction: column;
   }
@@ -266,4 +325,21 @@ p {
   .main button {
     font-size: 3em;
   }
+
+  /* ABOUT */
+
+  .about {
+    padding-bottom: 15em;
+  }
+
+  .video {
+    margin: 4em 0 0 0;
+    order: 2;
+  }
+
+  .about-text {
+    width: 100%;
+    padding: 10em 15em 0 15em;
+  }
+
 }
