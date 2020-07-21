@@ -842,6 +842,10 @@ p {
     font-size: 3em;
   }
 
+  .timer button {
+    font-size: 3em;
+  }
+
   /* REVIEWS */
 
   .videos {
