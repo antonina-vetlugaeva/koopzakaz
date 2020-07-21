@@ -146,9 +146,20 @@ p {
   background-color: #f1f1f1;
 }
 
+.big {
+  position: absolute;
+  z-index: -1;
+  color: #DAD9D9;
+  font-size: 10em;
+  font-weight: bold;
+  margin-right: 30em;
+  width: 100%;
+}
+
 .about-text {
   padding: 1.5em 6.56em 0 0;
   width: 50%;
+  z-index: 2;
 }
 
 .about-text h2 {
@@ -161,6 +172,7 @@ p {
   position: relative;
   width: 100%;
   margin-right: 6.56em;
+  z-index: 2;
 }
 
 .video::after {
@@ -213,7 +225,55 @@ p {
   margin-left: -3em;
 }
 
-@media screen and (max-width: 800px) {
+/* RULES */
+
+.rules {
+  background-color: #f1f1f1;
+  padding: 4.5em 6.5em 5em 6.5em;
+}
+
+.rules h2 {
+  width: 48%;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  align-items: center;
+  margin-top: 4em;
+}
+
+.rules img {
+  width: 50%;
+  margin-left: 4em;
+}
+
+.profits {
+  width: 45%;
+}
+
+.profit {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2em;
+}
+
+.profit p {
+  margin-left: 2em;
+  margin-top: 0;
+}
+
+.marker {
+  background-color: #fe9a2b;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+
+
+@media screen and (min-width: 767px) and (max-width: 1399px) {
   header {
     position: absolute;
   }
@@ -295,42 +355,76 @@ p {
   .main button {
     font-size: 1.2em;
   }
-}
 
-/* WHY */
+  /* WHY */
 
-.why {
-  width: 80%;
-  display: inline-block;
-  text-align: center;
-}
+  .why {
+    width: 80%;
+    display: inline-block;
+    text-align: center;
+  }
 
-.why-points {
-  margin-top: 6em;
-  flex-wrap: wrap;
-}
+  .why-points {
+    margin-top: 6em;
+    flex-wrap: wrap;
+  }
 
-.point {
-  text-align: left;
-  width: 40%;
-  padding-bottom: 2.5em;
-}
+  .point {
+    text-align: left;
+    width: 40%;
+    padding-bottom: 2.5em;
+  }
 
-.point p {
-  margin-top: 1em;
+  .point p {
+    margin-top: 1em;
+  }
+
+  /* RULES */
+
+  .content {
+    margin-top: 5.3em;
+  }
+
+  .marker {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
 
+  #menu-icon {
+    display:inline-block;
+  }
+
   nav ul, nav:active ul {
-    margin-top: 6em;
-    width: 30%;
+    display: none;
+    position: absolute;
+    padding: 1.44em;
+		background: #fff;
+		border: 2px solid #444;
+    float: left;
+    right: 18.25em;
+		top: 6em;
+		width: 30%;
   }
 
   nav li a {
     color: black;
     font-size: 5em;
+  }
+
+  nav li a:hover {
+    color: #fe9a2b;
+  }
+
+  nav:hover ul {
+    display: block;
+  }
+
+  nav:active ul {
+    display: block;
   }
 
   #logo img {
@@ -434,6 +528,29 @@ p {
   .circle {
     width: 10em;
     height: 10em;
+  }
+
+  /* RULES */
+
+  .rules {
+    background-color: #f1f1f1;
+    padding: 4.5em 6.5em 5em 6.5em;
+  }
+
+  .rules h2 {
+    width: 100%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+    margin-top: 8.3em;
+  }
+
+  .rules img {
+    width: 100%;
   }
 
 }
