@@ -7,12 +7,10 @@
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta name="keywords" content="важные, ключевые, слова">
   <meta name="description" content="краткое описание">
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="../js/wow.min.js" charset="utf-8"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
-  <header>
+  <header class="wow slideInDown">
     <a href="#" id="logo">
       <img src="images/logo.png">
       <span>Коопзаказ</span>
@@ -27,7 +25,7 @@
       </ul>
     </nav>
   </header>
-  <section class="main">
+  <section class="main wow fadeIn">
     <img src="images/photo1.png">
     <div class="main-text">
       <h1>Кооператив для детского бизнеса</h1>
@@ -35,7 +33,7 @@
       <a href=#about><button>Получить консультацию</button></a>
     </div>
   </section>
-  <section class="about" id="about">
+  <section class="about wow fadeIn" id="about">
     <div class="video">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/1-3vn62M2zo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
@@ -45,7 +43,7 @@
       <p>Я много лет веду свою деятельность в&#160;рамках потребительской кооперации и&#160;хочу поделиться своим обширным и&#160;богатым опытом с&#160;вами. Ведь строить бизнес в&#160;потребительской кооперации гораздо выгоднее, интереснее и&#160;справедливее.</p>
     </div>
   </section>
-  <section class="why">
+  <section class="why wow fadeIn">
     <h2>Почему кооператив?</h2>
     <div class="why-points">
       <div class="point">
@@ -73,7 +71,7 @@
   <section class="rules">
     <h2>Только ваши правила в&#160;вашем бизнесе</h2>
     <div class="content">
-      <div class="profits">
+      <div class="profits wow fadeIn">
         <div class="profit">
           <div class="marker"></div>
           <p>9 лет кооперативной деятельности</p>
@@ -103,13 +101,13 @@
           <p>Настройка чат-бота для сайта</p>
         </div>
       </div>
-      <img src="images/hero-image.png">
+      <img src="images/hero-image.png" class="wow slideInUp">
     </div>
   </section>
   <section class="price" id="price">
     <span class="big">Тарифы</span>
     <h2>Тарифы</h2>
-    <div class="options">
+    <div class="options wow slideInUp">
       <div class="option-card">
         <h3>Старт</h3>
         <p>Если Вы только открываете свой бизнес</p>
@@ -145,14 +143,49 @@
       </div>
     </div>
   </section>
-  <section class="timer">
+  <section class="timer wow fadeIn">
+    <div class="container">
+      <h2>Скидка 30% на все тарифы!</h2>
+      <p>При оплате до 1 августа стоимость начального тарифа составляет 13650р, тарифа «партнер» — 24500р, тарифа «профи» — 35000р</p>
+      <p>До конца акции осталось</p>
+      <ul>
+        <li><span id="days"></span>дней</li>
+        <li><span id="hours"></span>часов</li>
+        <li><span id="minutes"></span>минут</li>
+        <li><span id="seconds"></span>секунд</li>
+      </ul>
+      <button>Получить консультацию</button>
+    </div>
   </section>
   <section class="reviews">
+    <h2>Отзывы</h2>
+    <div class="videos">
+      <div class="review">
+        <iframe width="270" height="315" src="https://www.youtube.com/embed/S37-dSot0N4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>Татьяна Викторовна</p>
+        <span>Руководительница сети частных детсадов</span>
+      </div>
+      <div class="review">
+        <iframe width="270" height="315" src="https://www.youtube.com/embed/UsJdClHaV_A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="review">
+        <iframe width="270" height="315" src="https://www.youtube.com/embed/yGjLnYAroPM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="review">
+        <iframe width="270" height="315" src="https://www.youtube.com/embed/AtirHomM0qQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
   </section>
   <section class="contact" id="contact">
   </section>
   <footer>
   </footer>
-  <script src="../js/woow.js" charset="utf-8"></script>
+
+  <script src="js/wow.min.js" charset="utf-8"></script>
+  <script src="js/timer.js" charset="utf-8"></script>
+
+  <script>
+  new WOW().init();
+  </script>
 </body>
 </html>

@@ -69,6 +69,10 @@ li a {
   font-weight: bold;
 }
 
+nav li a:hover {
+  color: #fe9a2b;
+}
+
 .current {
 	color: #fe9a2b;
 }
@@ -335,6 +339,117 @@ p {
   padding-bottom: 1em;
 }
 
+/* TIMER */
+
+.timer {
+  padding-bottom: 6.5em;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0.5em 15em;
+  text-align: center;
+}
+
+.container p:first-of-type {
+  padding: 0.5em 0 2em;
+}
+
+.container p:last-of-type {
+  font-weight: bold;
+}
+
+.timer ul {
+  display: inline-block;
+  text-align: center;
+  margin-top: 0;
+}
+
+.timer li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+.timer li span {
+  display: block;
+  font-weight: bold;
+  color: #fe9a2b;
+  font-size: 4.5rem;
+  padding-bottom: 0.1em;
+}
+
+.timer button {
+  background-color: #fe9a2b;
+  padding: 1.5em 2.2em;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+  display: block;
+  margin: 2em auto 0;
+}
+
+.timer button:hover {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+/* REVIEWS */
+
+.reviews {
+  padding: 3.5em 6.5em 5em 6.5em;
+  background-color: #f1f1f1;
+}
+
+.reviews h2 {
+  text-align: center;
+  margin-bottom: 1.3em;
+}
+
+.videos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.review .video {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.review .video::after {
+  padding-top: 56.25%;
+  display: block;
+  content: '';
+}
+
+.review .video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.review p {
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
+}
+
+.review span {
+  margin-top: 0;
+  text-align: center;
+  width: 4em;
+  padding: 0;
+}
+
 
 
 @media screen and (min-width: 767px) and (max-width: 1399px) {
@@ -398,6 +513,10 @@ p {
 
   p {
     font-size: 2em;
+  }
+
+  h3 {
+    font-size: 2.5em;
   }
 
   .big {
@@ -470,6 +589,17 @@ p {
     font-size: 2em;
     line-height: 120%;
   }
+
+  /* TIMER */
+
+  .timer li {
+    font-size: 2em;
+  }
+
+  .timer li span {
+    font-size: 4.5em;
+  }
+
 }
 
 
@@ -494,10 +624,6 @@ p {
   nav li a {
     color: black;
     font-size: 5em;
-  }
-
-  nav li a:hover {
-    color: #fe9a2b;
   }
 
   nav:hover ul {
@@ -674,5 +800,13 @@ p {
     padding-bottom: 1em;
   }
 
+  /* TIMER */
 
+  .timer li {
+    font-size: 4em;
+  }
+
+  .timer li span {
+    font-size: 3em;
+  }
 }
